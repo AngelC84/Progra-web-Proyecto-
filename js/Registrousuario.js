@@ -9,7 +9,6 @@ function readImage(input){
         reader.readAsDataURL(input.files[0]);
     }
 }
-[18:33]
 $('#image').change(function(){
     readImage(this);
 

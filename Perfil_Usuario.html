@@ -38,10 +38,14 @@
     
         <section class = "BusquedaAvanzada">
         <p >Busqueda Avanzada</p>
+        <input type="text" name="search" placeholder= "Busca tu pelicula" class="buscAv" autocomplete="off"> 
+        <select name="Categorias" id="categ" placeholder="Categorias" class="comboAv">
+            <option> Categoria</option>
         <input type="date" id="fecha1" name="fecha1" class="filt">
         <input type="date" id="fecha2" name="fecha2" class="filt">
         <input type = "text" name = "Utiles" id = utiles placeholder="Comentarios utiles" class="filt">
         <input type = "text" name = "Favoritos" id = favorito placeholder="Numero de Favoritos" class="filt">
+        <input type="button" value="Buscar" class="botAv">
         </section> 
 
         <main class="main">
@@ -67,6 +71,7 @@
 <ul>
     <li><a href="#" title="Preguntas">Preguntas</a></li>
     <li><a href="#" title="Utiles"> Utiles</a></li>
+    <li><a href="#" title="NoUtiles"> No Utiles</a></li>
     <li><a href="#" title="Favoritos"> Favoritos</a></li>
 </ul>
 </div>
@@ -122,6 +127,25 @@
     <p class = "catego">CATEGORIA</p>
 </main>
     
+
+<div class = "paginacion">
+    <div class = "pagina">
+    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div class = "pagina">1</div>
+    <div class = "pagina">2</div>
+    <div class = "pagina">3</div>
+    <div class = "pagina">4</div>
+    <div class = "pagina">5</div>
+    <div class = "pagina">6</div>
+    <div class = "pagina">7</div>
+    <div class = "pagina">8</div>
+    <div class = "pagina">9</div>
+    <div class = "pagina">10</div>
+    <div class = "pagina">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
+</div>
 
         <footer class= "footer">
             <div class= "container">

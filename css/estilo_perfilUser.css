@@ -57,7 +57,7 @@ font-size: 1.2em;
      background: black;
      color:#FFFFFF; 
      padding: 2rem 0;
-     margin-top: 100%;
+     margin-top: 2%;
  }
 
   nav.row{
@@ -132,9 +132,9 @@ select.combo{
 .BusquedaAvanzada{
    font-family:sans-serif;
    color: black;
-   bottom:50%;
+   bottom:20%;
    position: fixed;
-   width:180px;
+   width:200px;
    background-color: burlywood;
    padding: 30px;
    margin: auto;
@@ -142,13 +142,52 @@ select.combo{
    border-radius: 15px;
    
 }
+
+.buscAv{
+    width: 100%;
+    margin-left: -10px;
+    background: #DED5BA no-repeat 100px center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 3px solid #DED5BA;
+    margin-bottom: 40px;
+
+
+}
+
+.comboAv{
+   bottom:52%;
+   width: 10%;
+   position: fixed;
+   background-color:  3px solid #DED5BA;
+   border-radius: 25px;
+   border: 3px solid #DED5BA;
+   font-family: 'Itim', cursive;
+   font-size: 13px;
+   left: 50px;
+
+}
+
+.botAv{
+    width: 10%;
+    position: fixed;
+    left: 3.5%;
+    background-color:#DFCB2B;
+    border-radius: 25px;
+    border: 3px solid #FFFFFF;
+    font-family: 'Itim', cursive;
+    font-size: 15px;
+
+    }
+
 input.filt{
    color: #DFCB2B;
    font-size: 16px; 
    padding: 2px;
    margin: auto;
    border-radius: 10px;
-   margin-bottom: 16px;
+   margin-bottom: 20px;
 
 }
 
@@ -267,3 +306,52 @@ margin-top: 10%;
     font-family: 'Truculenta', sans-serif;    
 font-size: 30px;
 }
+
+div.paginacion{
+    
+    display: flex;
+    width: 30vw;
+    height: 10vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow:0px 0px 3px 1px rgb(54, 53, 53) ;
+    border-radius: 25px;
+    height: 40px;
+     text-align: center;
+     margin-top: 10%;
+}
+div.pagina{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    margin: auto;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+ div.pagina::before{
+content: "";
+position: absolute;
+left: 50%;
+top: 50%;
+width: 0px;
+height: 0px;
+transform: translate(-50% ,-50%);
+background-color: black;
+border-radius: 50%;
+transition: all 0.5s;
+z-index: -1;
+ }
+
+div.pagina:hover{
+     color: white;
+}
+div.pagina:hover::before{
+     width: 40px;
+     height: 40px;
+ }

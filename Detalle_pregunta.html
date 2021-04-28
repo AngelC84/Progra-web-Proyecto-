@@ -37,11 +37,15 @@
         </h1>
     
         <section class = "BusquedaAvanzada">
-        <p >Busqueda Avanzada</p>
-        <input type="date" id="fecha1" name="fecha1" class="filt">
-        <input type="date" id="fecha2" name="fecha2" class="filt">
-        <input type = "text" name = "Utiles" id = utiles placeholder="Comentarios utiles" class="filt">
-        <input type = "text" name = "Favoritos" id = favorito placeholder="Numero de Favoritos" class="filt">
+            <p >Busqueda Avanzada</p>
+            <input type="text" name="search" placeholder= "Busca tu pelicula" class="buscAv" autocomplete="off"> 
+            <select name="Categorias" id="categ" placeholder="Categorias" class="comboAv">
+                <option> Categoria</option>
+            <input type="date" id="fecha1" name="fecha1" class="filt">
+            <input type="date" id="fecha2" name="fecha2" class="filt">
+            <input type = "text" name = "Utiles" id = utiles placeholder="Comentarios utiles" class="filt">
+            <input type = "text" name = "Favoritos" id = favorito placeholder="Numero de Favoritos" class="filt">
+            <input type="button" value="Buscar" class="botAv">
         </section> 
         <main class="main">
 
@@ -117,8 +121,11 @@
                     <div class="contenido_del_contenido">
                     <p class="Respuesta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum velit dolore sapiente veritatis, sunt esse quas quis tempore, ad molestias explicabo, nulla asperiores quia? Repellat tenetur maiores eligendi quaerat!</p>
                     <div class="imagen_respuesta"><img src="Shrek_resp.jpg" width="150px" height="150"/></div>
+                    </div> 
+                    <div class= "botones_utiles"> 
+                    <input type="button" value="Util" class = "Utilidad">
+                    <input type="button" value="No Util" class = "Utilidad">
                     </div>
-                    <p class = "Utilidad">Util</p>
                     </div>
 
         <div class= "Usuario_respuesta"> 
@@ -128,6 +135,19 @@
         </div>
         </div>
         </main>
+
+<main class="Responder">
+
+    <p class="titulo_resp">Responder pregunta</p>
+
+    <div class="container_responder"> 
+        <input type = "text" name = "Respuesta" id = resp placeholder="Responder pregunta" class="respu_preg">
+        <p class="Cargar_text">Cargar imagen</p>
+        <img alt= "FotoResp" id="FotografiadeRespuesta" class="fotoResp"> 
+        <input id="FotoResp" type="file" name="Fotografia" placeholder="Foto para Respuesta" class="input-foto" required>
+        <input type="button" value="Publicar" class="botRes">
+    </div>
+</main>
 
         <div class = "paginacion">
             <div class = "pagina">
@@ -169,5 +189,23 @@
             </nav>
             </div>
             </footer>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+$('document').ready(function(){
+    function readImage(input){
+        if(input.files && input.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#FotografiadeRespuesta').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $('#FotoResp').change(function(){
+        readImage(this);
+    });
+    });
+</script>
 </body>
 </html>

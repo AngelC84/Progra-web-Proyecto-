@@ -127,28 +127,68 @@ select.combo{
    font-size: 13px;
 }
 
-.BusquedaAvanzada{
-   font-family:sans-serif;
-   color: black;
-   bottom:50%;
-   position: fixed;
-   width:180px;
-   background-color: burlywood;
-   padding: 30px;
-   margin: auto;
-   margin-top: 200px;
-   border-radius: 15px;
-   
-}
-input.filt{
-   color: #DFCB2B;
-   font-size: 16px; 
-   padding: 2px;
-   margin: auto;
-   border-radius: 10px;
-   margin-bottom: 16px;
 
-}
+.BusquedaAvanzada{
+    font-family:sans-serif;
+    color: black;
+    bottom:20%;
+    position: fixed;
+    width:200px;
+    background-color: burlywood;
+    padding: 30px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 15px;
+    
+ }
+ 
+ .buscAv{
+     width: 100%;
+     margin-left: -10px;
+     background: #DED5BA no-repeat 100px center;
+     outline: none;
+     font-size: 20px;
+     border-radius: 25px;
+     border: 3px solid #DED5BA;
+     margin-bottom: 40px;
+ 
+ 
+ }
+ 
+ .comboAv{
+    bottom:52%;
+    width: 10%;
+    position: fixed;
+    background-color:  3px solid #DED5BA;
+    border-radius: 25px;
+    border: 3px solid #DED5BA;
+    font-family: 'Itim', cursive;
+    font-size: 13px;
+    left: 50px;
+ 
+ }
+ 
+ .botAv{
+     width: 10%;
+     position: fixed;
+     left: 3.5%;
+     background-color:#DFCB2B;
+     border-radius: 25px;
+     border: 3px solid #FFFFFF;
+     font-family: 'Itim', cursive;
+     font-size: 15px;
+ 
+     }
+ 
+ input.filt{
+    color: #DFCB2B;
+    font-size: 16px; 
+    padding: 2px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+ 
+ }
 
 .Login{
     width: 400px;
