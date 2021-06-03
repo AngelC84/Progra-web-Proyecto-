@@ -29,13 +29,11 @@
     <h1 class="Buscador">
         <input type="text" name="search" placeholder= "Busca tu pelicula" class="src" autocomplete="off"> 
         <i class="fas fa-search"></i>
-    </h1>
-
-    <h1 class="Buscar">
         <input type="button" value="Buscar" class="bot">
         <select name="Categorias" id="categ" placeholder="Categorias" class="combo">
             <option> Categoria</option>
         </select>
+
     </h1>
 
     <section class = "BusquedaAvanzada">
@@ -50,7 +48,24 @@
         <input type="button" value="Buscar" class="botAv">
     </section> 
 
+
+    <main class="Pregunta">
+
+        <p class="titulo_preg">Hacer Pregunta</p>
+    
+        <div class="container_pregunta"> 
+            <select name="Categorias" id="categ" placeholder="Categoria" class="combopregunta">
+            <option> Categoria</option>
+            <input type = "text" name = "Respuesta" id = resp placeholder="Hacer pregunta" class="hacer_preg">
+            <p class="Cargar_text">Cargar imagen</p>
+            <img alt= "FotoResp" id="FotografiadeRespuesta" class="fotoPreg"> 
+            <input id="FotoResp" type="file" name="Fotografia" placeholder="Foto para Pregunta" class="input-foto" required>
+            <input type="button" value="Publicar" class="botRes">
+        </div>
+    </main>
+
 <main class="main">
+    
     <div class="container_main"> 
         <div class="imagen"><img src="cookie2.jpg" width="150px" height="150"/></div>
         <div class="text"> <p>Cookie</p>
@@ -580,5 +595,23 @@ Que te quiero, que te quiero.
 
 </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    $('document').ready(function(){
+        function readImage(input){
+            if(input.files && input.files[0]){
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#FotografiadeRespuesta').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $('#FotoResp').change(function(){
+            readImage(this);
+        });
+        });
+    </script>
 </body>
 </html>
