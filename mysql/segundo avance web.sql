@@ -1,5 +1,7 @@
 CREATE DATABASE PIA_WEB;
 USE PIA_WEB;
+DROP DATABASE PIA_WEB;
+
 
 CREATE TABLE `usuario` (
   `Id_Usuario` varchar(20) NOT NULL,
@@ -213,6 +215,8 @@ END IF;
 
 END //
 
+
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spPregunta`(
 
 IN pOpc varchar(30),
@@ -307,6 +311,7 @@ END IF;
 
 END //
 
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spRespuesta`(IN pOpc varchar(30),
 IN pIdRespuesta int,
 IN pRespuesta varchar(255),
@@ -380,13 +385,11 @@ END IF;
 
 END //
 
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spCategoria`(IN pOpc varchar(30),
 IN pIdCategoria INT,
 IN pNombreCategoria VARCHAR(30))
 BEGIN
-
-
-
 
 
 IF pOpc = 'Insert'
@@ -419,6 +422,7 @@ END IF;
 
 END // 
 
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spFavorito`(IN pOpc varchar(30),
 IN pIdUsuario varchar(20),
 IN pIdPregunta int)
@@ -443,6 +447,8 @@ END IF;
 
 END//
 
+
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spPreguntaNoUtil`(IN pOpc varchar(30),
 IN pIdUsuario varchar(20),
 IN pIdPregunta int)
@@ -489,6 +495,8 @@ END IF;
 
 END//
 
+
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spRespuestaNoUtil`(IN pOpc varchar(30),
 IN pIdUsuario varchar(20),
 IN pIdRespuesta int)
@@ -514,6 +522,8 @@ END IF;
 
 END//
 
+
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `spRespuestaUtil`(IN pOpc varchar(30),
 IN pIdUsuario varchar(20),
 IN pIdRespuesta int)

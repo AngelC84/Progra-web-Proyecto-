@@ -1,0 +1,10 @@
+com\mycompany\piapw\dao\UserDAO.class
+com\mycompany\piapw\models\User.class
+com\mycompany\piapw\dao\CategoryDAO.class
+com\mycompany\piapw\controllers\SignInController.class
+com\mycompany\piapw\utils\DbConnection.class
+com\mycompany\piapw\controllers\categoryController.class
+com\mycompany\piapw\utils\FileUtils.class
+com\mycompany\piapw\controllers\LogInController.class
+com\mycompany\piapw\controllers\LogOffController.class
+com\mycompany\piapw\models\Category.class
